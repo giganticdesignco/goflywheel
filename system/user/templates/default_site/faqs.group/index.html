@@ -1,0 +1,44 @@
+{exp:channel:entries channel="faqs"}
+{embed="_includes/head" css="site-20230117.css" title="FAQ's"}
+<body class="faq-page">
+
+	{embed="_includes/nav-updated"}
+
+	<section class="mast auto-height pad">
+		<div class="faq-container">
+			<h1 class="large no-pad white">{title}</h1>
+		</div>
+	</section>
+
+	<section class="faqs">
+		{faq_copy}
+			{faq_copy:headline}<div class="faq-container"><h2>{content}</h2></div>{/faq_copy:headline}
+			{faq_copy:faqs}
+				{content}
+				<div class="faq-container border">
+					<button class="faq hidden">
+						<div class="title-with-btn">
+							<div class="heading">
+								<h3 class="darkgreen">{content:question}</h3>
+							</div>
+							<span class="circle">
+								{expand-icon}
+							</span>
+						</div>
+						<div class="faq-content">
+							<div class="copy">
+								<p>{content:answer}</p>
+							</div>
+						</div>
+					</button>
+				</div>
+				{/content}
+			{/faq_copy:faqs}
+		{/faq_copy}
+	</section>
+
+	{embed="_includes/footer"}
+	{embed="_includes/_scripts" js="faqs" waypoints="y"}
+</body>
+{/exp:channel:entries}
+</html>

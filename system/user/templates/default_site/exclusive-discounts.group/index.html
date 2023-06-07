@@ -1,0 +1,43 @@
+{exp:channel:entries channel="discounts_page"}
+{embed="_includes/head" css="site-20230126.css" keywords="{seo_keywords}" description="{seo_description}" title="{title}"}
+{/exp:channel:entries}
+<body class="discounts">
+
+	{embed="_includes/nav-updated"}
+	{exp:channel:entries channel="discounts_page"}
+	<section class="mast">
+		<div class="container">
+			<div class="container-sm">
+				<div class="copy fadeup">
+					{mast_content}
+					<div class="overline">{mast_content:overline}</div>
+					<h1 class="white">{mast_content:heading}</h1>
+					<p class="subhead">{mast_content:copy}</p>
+					{/mast_content}
+				</div>
+			</div>
+			{mast_images}
+			<figure><img srcset="{mast_images:1x} 1x, {mast_images:2x} 2x" src="{mast_images:1x}" /></figure>
+			{/mast_images}
+		</div>
+	</section>
+	{/exp:channel:entries}
+	
+	<section class="partners">
+		<div class="container-sm">
+			{exp:channel:entries channel="partners" sort="asc"}
+			<div class="partner">
+				{if logo_link}<a href="{logo_link}">{/if}
+					<img src="{partner_logo}" {if logo_width}style="max-width:{logo_width}px"{if:else}class="setwidth"{/if} alt="{title}" style>
+				{if logo_link}</a>{/if}
+				{partner_description}
+			</div>
+			{/exp:channel:entries}
+		</div>
+	</section>
+	
+
+	{embed="_includes/footer"}
+	{embed="_includes/_scripts" js="home" rellax="y" countup="y" waypoints="y"}
+</body>
+</html>

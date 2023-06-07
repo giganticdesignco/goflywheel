@@ -1,0 +1,231 @@
+{exp:channel:entries channel="homepage"}
+{embed="_includes/head" css="site-20230126.css" keywords="{seo_keywords}" description="{seo_description}" title="{title}"}
+<body class="home">
+
+	{embed="_includes/nav-updated"}
+
+	<section class="mast">
+		<div class="container-sm">
+			<div class="copy fadeup">
+				{!-- <div class="logo">
+					{logo-with-text}
+				</div> --}
+				{mast_content}
+				<div class="overline">{mast_content:overline}</div>
+				<h1 class="white">{mast_content:heading}</h1>
+				<p class="subhead">{mast_content:copy}</p>
+				{if logged_in}
+				{!-- <div class="input-contain">
+					<input type="text" placeholder="Enter your DOT Number" autofocus>
+					<button class="btn btn-rounded bg-red" onClick="redirectDOT()">Let's Go</button>
+				</div> --}
+				{/if}
+				{mast_content:form}
+				{/mast_content}
+			</div>
+		</div>
+		<figure>
+			{flywheel-icon}
+		</figure>
+	</section>
+
+	<section class="get-quote">
+		<img srcset="{site_url}images/home/city-aerial-blue.webp 1x, {site_url}images/home/city-aerial-blue@2x.webp 2x" src="{site_url}images/home/city-aerial-blue.webp" alt="City aerial photo" class="cover fill">
+		<div class="container-sm">
+			<div class="copy fadeup">
+				{hp_how_it_works_header}
+				<div class="overline pad-small">{hp_how_it_works_header:overline}</div>
+				<h2 class="white">{hp_how_it_works_header:heading}</h2>
+				<p class="subhead">{hp_how_it_works_header:copy}</p>
+				{/hp_how_it_works_header}
+			</div>
+			<div class="steps-contain">
+				{hp_how_it_works_steps}
+				<div class="step fadeup">
+					<div class="step-number">
+						<span>{hp_how_it_works_steps:count}</span>
+					</div>
+					<div class="step-copy">
+						<h3 class="white">{hp_how_it_works_steps:heading}</h3>
+						<p>{hp_how_it_works_steps:copy}</p>
+					</div>
+				</div>
+				{/hp_how_it_works_steps}
+			</div>
+			<div class="img-with-copy fadeup">
+				{hp_how_it_works_footer}
+				<div class="img">
+					<img srcet="{hp_how_it_works_footer:image_1x} 1x, {hp_how_it_works_footer:image_2x} 2x" src="{hp_how_it_works_footer:image_1x}" alt="{hp_how_it_works_footer:image_1x}{title}{/hp_how_it_works_footer:image_1x}" />
+				</div>
+				{hp_how_it_works_footer:copy}
+				{/hp_how_it_works_footer}
+			</div>
+		</div>
+	</section>
+
+	{hp_see_in_action}
+	<section class="see-in-action">
+		<div class="container">
+			{if hp_see_in_action:cta_text}
+			{!-- <div class="cta">
+				<div class="play">
+					<svg xmlns="http://www.w3.org/2000/svg" width="46.751" height="54.291" viewBox="0 0 46.751 54.291">
+						<g transform="translate(46.751) rotate(90)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M22.822,7.447a5,5,0,0,1,8.648,0L49.93,39.24a5,5,0,0,1-4.324,7.511H8.685A5,5,0,0,1,4.361,39.24Z" stroke="none"/>
+							<path d="M 27.14564323425293 9.957473754882812 L 27.1456470489502 9.957469940185547 L 8.684978485107422 41.75083541870117 L 45.60630035400391 41.75083541870117 L 27.1456470489502 9.957477569580078 C 27.14564514160156 9.957477569580078 27.14564514160156 9.957473754882812 27.14564323425293 9.957473754882812 M 27.14564323425293 4.957473754882812 C 28.8258113861084 4.957473754882812 30.50597953796387 5.787246704101562 31.46959114074707 7.446788787841797 L 49.93024826049805 39.24015808105469 C 51.86572647094727 42.57347869873047 49.4608039855957 46.75083541870117 45.60631561279297 46.75083541870117 L 8.684978485107422 46.75083541870117 C 4.830490112304688 46.75083541870117 2.425559997558594 42.57347869873047 4.361034393310547 39.24015808105469 L 22.82170295715332 7.446788787841797 C 23.78530883789062 5.787246704101562 25.46547508239746 4.957473754882812 27.14564323425293 4.957473754882812 Z" stroke="none" fill="#fff"/>
+						</g>
+					</svg>
+				</div>
+				<p>{hp_see_in_action:cta_text}</p>
+			</div> --}
+			{/if}
+			<figure>
+				<img srcset="{hp_see_in_action:image_1x} 1x, {hp_see_in_action:image_2x} 2x" src="{hp_see_in_action:image_1x}" alt="{hp_see_in_action:image_1x}{title}{/hp_see_in_action:image_1x}">
+			</figure>
+		</div>
+	</section>
+	{/hp_see_in_action}
+
+	<section class="insurance-perks">
+		<div class="container">
+			<header>
+				<h2 class="large">{hp_perks_headline}</h2>
+			</header>
+			<div class="perks"{if logged_in}{if:else} style="margin-bottom:4rem;"{/if}>
+				{hp_perks}
+				<div class="perk">
+					{hp_perks:icon}
+					<figure class="icon" style="background-color: {perks_color}"><img src="{url}" alt="{title}"></figure>
+					{/hp_perks:icon}
+					<p>{hp_perks:text}</p>
+				</div>
+				{/hp_perks}
+
+				{hp_perks_cta}
+				<div class="cta">
+					<p>{hp_perks_cta:copy}</p>
+					<a href="{hp_perks_cta:button_link}" class="btn bg-red btn-large btn-rounded">{hp_perks_cta:button_text}</a>
+				</div>
+				{/hp_perks_cta}
+			</div>
+		</div>
+	</section>
+
+	<section class="testimonials">
+		<figure class="fill">
+			<img srcset="{site_url}images/home/testimonial-bg.webp 1x, {site_url}images/home/testimonial-bg@2x.webp 2x" src="{site_url}images/home/testimonial-bg.webp" alt="" class="cover">
+		</figure>
+		<header class="container">
+			<h2 class="white">{hp_testimonials_headline}</h2>
+			<div class="rating">
+				<img src="{site_url}images/home/thumbs-up-gray.svg" class="thumbsup-gray">
+				<div class="thumbsup-red">
+					<img src="{site_url}images/home/thumbs-up-red.svg" class="">
+				</div>
+			</div>
+		</header>
+		<div class="container cards">
+			{hp_testimonials}
+			<div class="card">
+				{if hp_testimonials:name}<div class="name">{hp_testimonials:name}</div>{/if}
+				{if hp_testimonials:company}<div class="company">{hp_testimonials:company}</div>{/if}
+				<quote class="{if hp_testimonials:name || hp_testimonials:company}padtop{/if}">"{hp_testimonials:quote}"</quote>
+			</div>
+			{/hp_testimonials}
+		</div>
+	</section>
+
+	<section class="coverage">
+		<div class="container-sm">
+			<div class="contain">
+				<div class="copy fadeup">
+					{hp_coverages_content}
+					<div class="overline">{hp_coverages_content:overline}</div>
+					<h2 class="darkblue">{hp_coverages_content:heading}</h2>
+					<p class="subhead">{hp_coverages_content:copy}</p>
+					<a href="{hp_coverages_content:button_link}" class="btn bg-red btn-rounded">{hp_coverages_content:button_text}</a>
+					{/hp_coverages_content}
+				</div>
+				<div class="coverage-types">
+					{hp_coverages}
+					<div class="type fadeup delay-25">
+						
+						<img srcset="{hp_coverages:image_1x} 1x, {hp_coverages:image_2x} 2x" src="{hp_coverages:image_1x}" class="cover fill" alt="{hp_coverages:image_1x}{text}{/hp_coverages:image_1x}">
+						<div class="type-copy">
+							<div class="heading">
+								<h3 class="white">{hp_coverages:heading}</h3>
+							</div>
+							<p>{hp_coverages:copy}</p>
+						</div>
+						<span class="expand-contain">
+							<span class="open"></span>
+							<span class="close"></span>
+						</span>
+					</div>
+					{/hp_coverages}
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="industry-leaders">
+		<div class="copy fadeup">
+			{hp_stats_header}
+			<h2>{hp_stats_header:heading}</h2>
+			<p class="subhead darkgray">{hp_stats_header:copy}</p>
+			{/hp_stats_header}
+		</div>
+		<div class="stats fadeup">
+			{hp_stats}
+			<div class="stat">
+				<span class="number"><span data-count="{hp_stats:number:replace find=',' replace=''}">{hp_stats:number}</span>{hp_stats:number_format}</span>
+				<span class="text">{hp_stats:text}</span>
+			</div>
+			{/hp_stats}
+		</div>
+	</section>
+
+	<section class="not-ready-yet">
+		<img src="{site_url}images/home/truck-bg.webp" class="cover fill" alt="Semi driving down road">
+		<div class="text-shadow">{flywheel-type}</div>
+		<div class="container-sm">
+			<div class="copy-contain fadeup">
+				{!-- <div class="logo">
+					{logo}
+				</div> --}
+				<div class="copy">
+					{footer_cta}
+					<h2 class="black">{footer_cta:heading}</h2>
+					<p class="black">{footer_cta:copy}</p>
+					<a href="{footer_cta:button_link}" class="btn btn-black bg-darkblue btn-rounded">{footer_cta:button_text}</a>
+					{/footer_cta}
+				</div>
+			</div>
+		</div>
+	</section>
+
+	{embed="_includes/footer"}
+	{embed="_includes/_scripts" js="home" rellax="y" countup="y" waypoints="y"}
+	<script src="https://player.vimeo.com/api/player.js"></script>
+
+
+	<script>
+	if(typeof iframe == 'undefined') {
+		let iframe = document.querySelector("#pardot_form");
+		window.addEventListener('message', function(e) {
+			// message that was passed from iframe page
+			let message = e.data;
+
+			iframe.style.height = message.height + 80 + 'px';
+			if(window.innerWidth < 641) {
+				iframe.style.width = 320 + 'px';
+			} else {
+				iframe.style.width = message.width + 'px';
+			}
+		} , false);
+	}
+    
+    </script>
+</body>
+</html>
+{/exp:channel:entries}

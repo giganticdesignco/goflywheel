@@ -1,0 +1,1 @@
+if("undefined"==typeof coverageTypes){document.querySelectorAll(".coverage-types .type").forEach((e=>{e.addEventListener("click",(function(){e.classList.toggle("active")}))}))}

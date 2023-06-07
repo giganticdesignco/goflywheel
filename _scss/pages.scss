@@ -1,0 +1,398 @@
+@import "../_slab/slab.scss";
+
+h1 {
+	font-family: $montserrat;
+	font-size: 4rem;
+	font-weight: $bold;
+	line-height: 1;
+	letter-spacing: -0.06em;
+	@include media(">mobile") {
+		font-size: 8rem;
+	}
+	&.small {
+		font-size: 3.5rem;
+		@include media(">mobile") {
+			font-size: 5rem;
+		}
+	}
+}
+
+h2 {
+	font-family: $montserrat;
+	font-size: 2.7rem;
+	font-weight: $bold;
+	line-height: 1;
+	letter-spacing: -0.06em;
+	.blog-detail & {
+		margin-bottom: 1.5rem;
+		@include media(">mobile") {
+			margin-bottom: 2rem;
+		}
+	}
+	.pages-detail & {
+		margin: 4rem 0 1.5rem 0;
+	}
+}
+
+h3 {
+	font-size: 2rem;
+	margin: 2rem 0 1.2rem 0;
+	@include media(">mobile") {
+		margin: 4rem 0 1.2rem 0;
+	}
+}
+
+.container-sm {
+	@include container(80%);
+	@include media(">=1298px") {
+		@include container(1100px);
+	}
+}
+
+.overline {
+	display: inline-block;
+	font-weight: $semibold;
+	font-size: 1.8rem;
+	color: $orange;
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+	margin-bottom: 2.5rem;
+	&.pad-small {
+		margin-bottom: 1.8rem;
+	}
+}
+
+.input-contain {
+	display: flex;
+	flex-direction: column;
+	@include media(">mobile") {
+		flex-direction: row;
+		height: 6rem;
+	}
+	input {
+		margin-bottom: 1rem;
+		padding: 0.2rem 0.5rem 0 1rem;
+		font-size: 2rem;
+		border: 0;
+		border-radius: 0;
+		height: 5rem;
+		@include media(">mobile") {
+			height: auto;
+			margin-right: 1rem;
+			margin-bottom: 0;
+			padding: 0.2rem 2.5rem 0 2.5rem;
+		}
+		&::placeholder {
+			color: $darkgreen;
+			font-size: 1.9rem;
+		}
+		&.shadow {
+			box-shadow: 0px 6px 20px rgba(0, 0, 0, 20%);
+		}
+	}
+}
+
+.blog-mast {
+	padding: 15rem 0 5rem 0;
+	@include media(">=desktop") {
+		padding: 20rem 0 7rem 0;
+	}
+	.copy {
+		border-bottom: 1px solid $gray;
+	}
+}
+
+
+.blog-home {
+	padding-bottom: 12rem;
+	.blogs-contain {
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		grid-gap: 5rem;
+		@include media(">mobile") {
+			grid-gap: 3rem;
+		}
+		@include media(">=desktop") {
+			grid-template-columns: repeat(3, 1fr);
+		}
+		.blog {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			width: 100%;
+			&:hover {
+				.heading {
+					text-decoration: underline;
+				}
+			}
+			figure {
+				margin-bottom: 2rem;
+			}
+		}
+	}
+}
+
+.blog-detail {
+	padding: 6.2rem 0 7rem 0;
+	@include media(">mobile") {
+		padding: 6.2rem 0 12rem 0;
+	}
+
+	.social-share {
+		@include container(70rem);
+		margin-bottom: 2rem;
+
+		@include media(">=1300px") {
+			max-width: 100%;
+			position: absolute;
+			left: 0;
+			top: 7rem;
+		}
+		.platforms {
+			display: flex;
+			align-items: center;
+		}
+
+		.label {
+			text-transform: uppercase;
+			font-size: 1.3rem;
+			margin-bottom: 0.75em;
+			color: $darkgray;
+			font-weight: $bold;
+			font-family: $montserrat;
+		}
+		a {
+			padding: 1px 6px;
+			svg {
+				height: 2.7rem;
+				width: 2.7rem;
+				&:hover {
+					.colorize {
+						fill: #1877f2;
+					}
+				}
+			}
+		}
+		.colorize {
+			fill: $darkgray;
+			transition: .25s ease-in-out;
+		}
+
+		#fb-share:hover {
+			.colorize {
+				fill: #1877f2;
+			}
+		}
+
+		#tw-share:hover {
+			.colorize {
+				fill: #69ACE0;
+			}
+		}
+
+		#lkn-share:hover {
+			.colorize {
+				fill: #1877f2;
+			}
+		}
+	}
+
+	.mast {
+		position: relative;
+		max-height: 55rem;
+		margin: 0 auto;
+		display: flex;
+		align-items: flex-end;
+		padding-bottom: 8rem;
+		min-height: 40vh;
+
+
+
+		.container-sm {
+			width: 100%;
+		}
+
+		@include media(">mobile") {
+			min-height: 0;
+			aspect-ratio: 16/7;
+		}
+		h1 {
+			position: relative;
+			z-index: 2;
+			color: white;
+		}
+		.container-sm {
+			max-width: 80%;
+			@include media(">=880px") {
+				max-width: 70rem;
+			}
+		}
+		figure {
+			overflow: hidden;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+
+			&::after {
+				content:"";
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				background-image: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);;
+				opacity: 0.75;
+			}
+
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		&.no-image {
+			aspect-ratio: auto;
+			padding-top: 12rem;
+			padding-bottom: 0;
+			h1 {
+				color: black;
+			}
+		}
+
+	}
+	.content {
+		position: relative;
+		padding-top: 6rem;
+
+	}
+	.heading-with-date {
+		margin-bottom: 3rem;
+		@include media(">mobile") {
+			margin-bottom: 5rem;
+		}
+		@include media(">=desktop") {
+			padding-left: 10%;
+			margin-bottom: 5rem;
+		}
+		time {
+			display: block;
+			font-size: 2rem;
+			letter-spacing: -0.04em;
+			line-height: 1;
+			margin-bottom: 2rem;
+			@include media(">mobile") {
+				margin-bottom: 4rem;
+			}
+		}
+	}
+	
+	.copy-contain {
+		@include container(70rem);
+		p {
+			margin-bottom: 3rem;
+			font-size: 2rem;
+			line-height: 1.7;
+			color: $black;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		ul, ol {
+			padding-left: 1em;
+			margin-left: 1em;
+			li {
+				font-family: $nunito;
+				font-size: 2rem;
+				color: $black;
+				margin-bottom: 1.5rem;
+				line-height: 1.5;
+				ul {
+					margin-top: 2rem;
+					line-height: 1.5;
+				}
+			}
+		}
+		a {
+			text-decoration: underline;
+		}
+	}
+}
+
+.pages-detail {
+	position: relative;
+	padding: 15rem 0 7rem 0;
+	@include media(">mobile") {
+		padding: 18rem 0 12rem 0;
+	}
+
+	.heading {
+		max-width: 95rem;
+	}
+	figure {
+		overflow: hidden;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+
+		&::after {
+			content:"";
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background-image: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 100%);;
+			opacity: 0.75;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	
+	.copy-contain {
+		margin-top: 3rem;
+		@include media(">mobile") {
+			margin-top: 3rem;
+			max-width: 90rem;
+		}
+		p {
+			font-size: 1.8rem;
+			line-height: 1.7;
+			color: $black;
+			margin-bottom: 1rem;
+			@include media(">mobile") {
+				font-size: 2rem;
+			}
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		ul, ol {
+			padding-left: 1em;
+			margin: 1.5rem 0 2rem 1em;
+			li {
+				font-family: $nunito;
+				font-size: 2rem;
+				color: $black;
+				margin-bottom: 1.3rem;
+				line-height: 1.5;
+				ul {
+					margin-top: 2rem;
+					line-height: 1.5;
+				}
+			}
+		}
+		a {
+			text-decoration: underline;
+		}
+	}
+}
+
+

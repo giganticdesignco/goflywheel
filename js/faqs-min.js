@@ -1,0 +1,1 @@
+const faqButtons=document.querySelectorAll(".faq");faqButtons.forEach((t=>{t.addEventListener("click",(function(){t.classList.toggle("hidden")}))}));

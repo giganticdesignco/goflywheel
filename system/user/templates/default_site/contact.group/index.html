@@ -1,0 +1,39 @@
+{exp:channel:entries channel="contact_page"}
+{embed="_includes/head" css="site-20230126.css" title="Contact"}
+<body class="contact">
+
+	{embed="_includes/nav-updated"}
+
+	<section class="mast pad">
+		<div class="container-sm">
+			<div class="copy slim">
+				<h1 class="white">{headline}</h1>
+				<p class="subhead">{subhead}</p>
+				{form}
+			</div>
+			
+		</div>
+	</section>
+
+	{embed="_includes/footer"}
+	{embed="_includes/_scripts"}
+	<script>
+	if(typeof iframe == 'undefined') {
+		let iframe = document.querySelector("#pardot_form");
+		window.addEventListener('message', function(e) {
+			// message that was passed from iframe page
+			let message = e.data;
+
+			iframe.style.height = message.height + 80 + 'px';
+			if(window.innerWidth < 641) {
+				iframe.style.width = 320 + 'px';
+			} else {
+				iframe.style.width = message.width + 'px';
+			}
+		} , false);
+	}
+    
+    </script>
+</body>
+{/exp:channel:entries}
+</html>

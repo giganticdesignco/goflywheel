@@ -1,0 +1,43 @@
+/* COLORS */
+$white: #FFFFFF;
+$darkgreen: #1C2427;
+$orange: #FF9F0B;
+$red: #FC001B;
+$lightblue: #697884;
+// $darkblue: #35444A;
+$darkblue: #121719;
+$darkgray: #697884;
+$gray: #F8F8F8;
+$black: #030203;
+$bordergray: #e8e8e8;
+$yellow: #FF9F0B;
+
+// Font colors
+.white {
+	color: $white;
+}
+
+.darkgreen {
+	color: $darkgreen;
+}
+
+.darkgray {
+	color: $darkgray;
+}
+
+.black {
+	color: $black;
+}
+
+// Background Colors
+.bg-red {
+	background: $red;
+}
+
+.bg-orange {
+	background: $orange;
+}
+
+.bg-darkblue {
+	background: $darkblue;
+}

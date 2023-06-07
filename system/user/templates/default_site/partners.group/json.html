@@ -1,0 +1,18 @@
+{exp:channel:entries channel="discounts_page" sort="asc"}{
+	{mast_content}
+	"overline": {mast_content:overline:json},
+	"heading": {mast_content:heading:json},
+	"copy": {mast_content:copy:json},
+	"src": "{mast_images}{mast_images:1x}{/mast_images}",
+	"srcset": "{mast_images}{mast_images:1x}{/mast_images} 1x, {mast_images}{mast_images:2x}{/mast_images} 2x",
+	{/mast_content}
+	"discounts":[{partners backspace='1'}{
+		"id": "{partners:entry_id}",
+		"name": "{partners:title}",
+		"link": "{partners:partner_link}",
+		"logo": "{partners:partner_logo}",
+		"logo_link": "{partners:logo_link}",
+		"description": "{partners:partner_description}"
+	},{/partners}
+	]
+}{/exp:channel:entries}

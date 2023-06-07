@@ -1,0 +1,31 @@
+{exp:channel:entries channel="pages" url_title="{last_segment}"}
+{embed="_includes/head" css="pages.css" title="{title}"}
+<body>
+
+	{embed="_includes/nav-updated"}
+
+	<section class="blog-detail">
+		<div class="mast{if image}{if:else} no-image{/if}">
+			<div class="container-sm">
+				<h1 class="small white">{title}</h1>
+			</div>
+			{if image}
+			<figure class="featured-photo">
+				<img src="{image}" class="cover" alt="{title}">
+			</figure>
+			{/if}
+		</div>
+		
+		<div class="container-sm content">			
+			<div class="copy-contain">
+				{copy}
+			</div>
+		</div>
+	</section>
+
+	{/exp:channel:entries}
+
+	{embed="_includes/footer"}
+	{embed="_includes/_scripts"}
+</body>
+</html>

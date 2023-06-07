@@ -1,0 +1,27 @@
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5GWQNPR"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+
+<nav>
+	<div class="container-sm">
+		<div class="nav-contain">
+			<a href="{site_url}" class="logo">{logo-with-text}</a>
+			<div class="nav-links">
+				{exp:channel:entries channel="top_navigation" dynamic="no"}
+				{links}
+				<a href="{links:url}"{if links:is_button} class="btn btn-small btn-rounded no-shadow"{/if} {if links:new_tab} target="_blank"{/if}>{links:label}</a>
+				{/links}
+				{/exp:channel:entries}
+			</div>
+			<div class="menu-icon">
+				<input class="menu-icon__checkbox" type="checkbox" />
+				<div>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>

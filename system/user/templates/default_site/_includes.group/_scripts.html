@@ -1,0 +1,12 @@
+<script src="{site_url}js/third-party/jquery-3.2.1.min.js"></script>
+<script src="{site_url}js/third-party/jquery.waypoints.min.js"></script>
+{if embed:countup}
+	<script src="{site_url}js/third-party/count-up.js?v={current_time}"></script>
+{/if}
+<script src="{site_url}js/base.js?v={current_time}"></script>
+{if embed:waypoints}
+	<script src="{site_url}js/third-party/jquery.waypoints.min.js"></script>
+{/if}
+{if embed:js}
+	<script src="{site_url}js/{embed:js}.js?v={current_time}"></script>
+{/if}

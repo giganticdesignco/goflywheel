@@ -1,0 +1,40 @@
+{embed="_includes/head" css="pages.css" title="Blog"}
+<body>
+
+	{embed="_includes/nav-updated"}
+
+	<section class="blog-mast">
+		<div class="container-sm">
+			<div class="copy">
+				<div class="overline">Blogs</div>
+				<h1 class="black">Latest blogs from Flywheel</h1>
+				{!-- <p class="subhead">Need subhead copy here.</p> --}
+			</div>
+		</div>
+	</section>
+
+	<section class="blog-home">
+		<div class="container-sm">
+			<div class="blogs-contain">
+				{exp:channel:entries channel="blog"}
+					<a href="{path='blog/{url_title}'}" class="blog">
+						{if image}
+							<figure>
+								<img src="{image}" alt="{title}" class="cover">
+							</figure>
+						{/if}
+						<div class="heading">
+							<h2 class="small">{title}</h2>
+						</div>
+					</a>
+				{/exp:channel:entries}
+			</div>
+		</div>
+	</section>
+
+
+	{embed="_includes/footer"}
+	{embed="_includes/_scripts"}
+	<script src="https://player.vimeo.com/api/player.js"></script>
+</body>
+</html>

@@ -1,0 +1,297 @@
+{embed="_includes/head" css="site-20230117.css" title="Home"}
+<body>
+
+	{embed="_includes/nav"}
+
+	<section class="mast">
+		<div class="container-sm">
+			<div class="copy fadeup">
+				{!-- <div class="logo">
+					{logo-with-text}
+				</div> --}
+				<div class="overline">Get Your Quote Today</div>
+				<h1 class="white">Trucking insurance <br>made easy</h1>
+				<p class="subhead">Get the coverage you need, at the price you want, backed by the customer support you deserve.</p>
+				{if logged_in}
+				{!-- <div class="input-contain">
+					<input type="text" placeholder="Enter your DOT Number" autofocus>
+					<button class="btn btn-rounded bg-red" onClick="redirectDOT()">Let's Go</button>
+				</div> --}
+				{/if}
+				<iframe src="https://go.cottinghambutler.com/l/123052/2022-12-21/sqvz6q" frameborder="0"></iframe>
+			</div>
+		</div>
+		<figure>
+			{flywheel-icon}
+		</figure>
+	</section>
+
+	<section class="get-quote">
+		<img srcset="{site_url}images/home/city-aerial-blue.webp 1x, {site_url}images/home/city-aerial-blue@2x.webp 2x" src="{site_url}images/home/city-aerial-blue.webp" alt="City aerial photo" class="cover fill">
+		<div class="container-sm">
+			<div class="copy fadeup">
+				<div class="overline pad-small">Coming Soon</div>
+				<h2 class="white">A New Kind of Truck Insurance</h2>
+				<p class="subhead">Flywheel is everything traditional insurance is not. Our promise is to keep things simple, transparent, and affordable. Here’s how it works:</p>
+			</div>
+			<div class="steps-contain">
+				<div class="step fadeup">
+					<div class="step-number">
+						<span>1</span>
+					</div>
+					<div class="step-copy">
+						<h3 class="white">Enter DOT <br>Number</h3>
+						<p>Verify some simple contact and fleet information and you’re well on your way!</p>
+					</div>
+				</div>
+				<div class="step fadeup">
+					<div class="step-number">
+						<span>2</span>
+					</div>
+					<div class="step-copy">
+						<h3 class="white">Select Your <br>Coverage</h3>
+						<p>Review your personalized policy and choose the deductible that best suits you.</p>
+					</div>
+				</div>
+				<div class="step fadeup">
+					<div class="step-number">
+						<span>3</span>
+					</div>
+					<div class="step-copy">
+						<h3 class="white">Download Certificate of Insurance.</h3>
+						<p>Wrap it up with an easy online payment and get instant access to your certificates and new Flywheel Portal.</p>
+					</div>
+				</div>
+			</div>
+			<div class="img-with-copy fadeup">
+				<div class="img">
+					<img
+					  srcset="{site_url}images/home/flywheel-insurance-screenshot.webp,
+					  {site_url}images/home/flywheel-insurance-screenshot@2x.webp 2x"
+					  src="{site_url}images/home/flywheel-insurance-screenshot.webp"
+					  alt="Flywheel Insurance Screenshot" />
+				</div>
+				<p>Digitally receive your policy number, certificates and cab cards <span>faster than ever.</span></p>
+			</div>
+		</div>
+	</section>
+
+	<section class="see-in-action">
+		<div class="container">
+			{if logged_in}
+			<div class="cta">
+				<div class="play">
+					<svg xmlns="http://www.w3.org/2000/svg" width="46.751" height="54.291" viewBox="0 0 46.751 54.291">
+						<g transform="translate(46.751) rotate(90)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+							<path d="M22.822,7.447a5,5,0,0,1,8.648,0L49.93,39.24a5,5,0,0,1-4.324,7.511H8.685A5,5,0,0,1,4.361,39.24Z" stroke="none"/>
+							<path d="M 27.14564323425293 9.957473754882812 L 27.1456470489502 9.957469940185547 L 8.684978485107422 41.75083541870117 L 45.60630035400391 41.75083541870117 L 27.1456470489502 9.957477569580078 C 27.14564514160156 9.957477569580078 27.14564514160156 9.957473754882812 27.14564323425293 9.957473754882812 M 27.14564323425293 4.957473754882812 C 28.8258113861084 4.957473754882812 30.50597953796387 5.787246704101562 31.46959114074707 7.446788787841797 L 49.93024826049805 39.24015808105469 C 51.86572647094727 42.57347869873047 49.4608039855957 46.75083541870117 45.60631561279297 46.75083541870117 L 8.684978485107422 46.75083541870117 C 4.830490112304688 46.75083541870117 2.425559997558594 42.57347869873047 4.361034393310547 39.24015808105469 L 22.82170295715332 7.446788787841797 C 23.78530883789062 5.787246704101562 25.46547508239746 4.957473754882812 27.14564323425293 4.957473754882812 Z" stroke="none" fill="#fff"/>
+						</g>
+					</svg>
+				</div>
+				<p>See Flywheel in action</p>
+			</div>
+			{/if}
+			<figure>
+				<img srcset="{site_url}images/home/flywheel-cp.png 1x, {site_url}images/home/flywheel-cp@2x.png 2x" src="{site_url}images/home/flywheel-cp.png" alt="Flywheel Control Panel">
+			</figure>
+		</div>
+	</section>
+
+	<section class="insurance-perks">
+		<div class="container">
+			<header>
+				<h2 class="large">Insurance with Perks</h2>
+			</header>
+			<div class="perks"{if logged_in}{if:else} style="margin-bottom:4rem;"{/if}>
+				<div class="perk">
+					<figure class="icon"><img src="{site_url}images/icons/percentage-white.svg" alt=""></figure>
+					<p>Best Rates in<br> Trucking</p>
+				</div>
+				<div class="perk">
+					<figure class="icon"><img src="{site_url}images/icons/umbrella-white.svg" alt=""></figure>
+					<p>Customized<br> Coverage</p>
+				</div>
+				<div class="perk">
+					<figure class="icon"><img src="{site_url}images/icons/clipboard-white.svg" alt=""></figure>
+					<p>Hassle-free<br> Claims Reporting</p>
+				</div>
+			</div>
+			{if logged_in}
+			<div class="cta">
+				<p>Explore the Flywheel Benefits</p>
+				<a href="#benefits" class="btn bg-red btn-large btn-rounded">Let's Go</a>
+			</div>
+			{/if}
+			<div class="perks">
+				<div class="perk">
+					<figure class="icon"><img src="{site_url}images/icons/monitor-white.svg" alt=""></figure>
+					<p>Self-service<br> Portal</p>
+				</div>
+				<div class="perk">
+					<figure class="icon"><img src="{site_url}images/icons/diamond-white.svg" alt=""></figure>
+					<p>Exclusive<br> Discounts</p>
+				</div>
+				<div class="perk">
+					<figure class="icon"><img src="{site_url}images/icons/headset-white.svg" alt=""></figure>
+					<p>Expert<br> Support Team</p>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<section class="testimonials">
+		<figure class="fill">
+			<img srcset="{site_url}images/home/testimonial-bg.jpg 1x, {site_url}images/home/testimonial-bg@2x.jpg 2x" src="{site_url}images/home/testimonial-bg.jpg" alt="" class="cover">
+		</figure>
+		<header class="container">
+			<h2 class="white">America’s Truckers<br> Love Flywheel</h2>
+			<div class="rating">
+				<img src="{site_url}images/home/thumbs-up-gray.svg" class="thumbsup-gray">
+				<div class="thumbsup-red">
+					<img src="{site_url}images/home/thumbs-up-red.svg" class="">
+				</div>
+				
+			</div>
+		</header>
+		<div class="container cards">
+			<div class="card">
+				{!-- <figure class="photo"></figure> --}
+				<div class="name">Steve Symington</div>
+				<div class="company">7 Men Trucking</div>
+				<quote>"I needed a new quote fast. Flywheel not only got me same-day coverage, I also lowered my premium and the entire process was so easy. Hands down the best insurance experience ever."</quote>
+			</div>
+			<div class="card">
+				{!-- <figure class="photo"></figure> --}
+				<div class="name">Béto Aguéro</div>
+				<div class="company">Hungry Freight</div>
+				<quote>"Wow. I love that I can get what I need 24/7 and no longer have to wait days for someone to call me back."</quote>
+			</div>
+			<div class="card">
+				{!-- <figure class="photo"></figure> --}
+				<div class="name">Rebeca Day</div>
+				<div class="company">Day One Shipping</div>
+				<quote>"I feel very comfortable knowing they have our best interest in mind. If you own a small trucking business, you NEED Flywheel."</quote>
+			</div>
+		</div>
+	</section>
+
+	<section class="coverage">
+		<div class="container-sm">
+			<div class="contain">
+				<div class="copy fadeup">
+					<div class="overline">We’ve got you covered</div>
+					<h2 class="darkblue">Everything you need to keep your fleet protected</h2>
+					<p class="subhead">No trucking company is the same, but many share the same risks. Flywheel offers comprehensive coverage options that fit your individual needs and budget.</p>
+					{if logged_in}<a href="#coverages" class="btn bg-red btn-rounded">Explore Coverages</a>{/if}+
+
+				</div>
+				<div class="coverage-types">
+					<div class="types-left">
+						<div class="type fadeup delay-25">
+							<img src="{site_url}images/home/auto-liability@2x.jpg" class="cover fill" alt="Auto liability">
+							<div class="type-copy">
+								<div class="heading">
+									<h3 class="white">Auto <br>Liability</h3>
+								</div>
+								<p>Help protect yourself financially if ever held responsible for damaging someone else's property or causing bodily injury.</p>
+							</div>
+							<span class="expand-contain">
+								<span class="open"></span>
+								<span class="close"></span>
+							</span>
+						</div>
+						<div class="type fadeup">
+							<img src="{site_url}images/home/back-of-semi@2x.jpg" class="cover fill" alt="Cargo coverage">
+							<div class="type-copy">
+								<div class="heading">
+									<h3 class="white">Cargo <br>Coverage</h3>
+								</div>
+								<p>Help protect yourself and your customers against the destruction, damage, or theft of the cargo you haul.</p>
+							</div>
+							<span class="expand-contain">
+								<span class="open"></span>
+								<span class="close"></span>
+							</span>
+						</div>
+					</div>
+					<div class="types-right">
+						<div class="type fadeup delay-50">
+							<img src="{site_url}images/home/general-liability@2x.jpg" class="cover fill" alt="General Liability">
+							<div class="type-copy">
+								<div class="heading">
+									<h3 class="white">General <br>Liability</h3>
+								</div>
+								<p>Covers common business risks associated with accidental customer injuries and damage to customer property.</p>
+							</div>
+							<span class="expand-contain">
+								<span class="open"></span>
+								<span class="close"></span>
+							</span>
+						</div>
+						<div class="type fadeup delay-75">
+							<img src="{site_url}images/home/physical-damage@2x.jpg" class="cover fill" alt="Physical damage">
+							<div class="type-copy">
+								<div class="heading">
+									<h3 class="white">Physical <br>Damage</h3>
+								</div>
+								<p>Get protection for your tractor and trailer if either is damaged or stolen.</p>
+							</div>
+							<span class="expand-contain">
+								<span class="open"></span>
+								<span class="close"></span>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="industry-leaders">
+		<div class="copy fadeup">
+			<h2>#1 Commercial Trucking Insurance Provider</h2>
+			<p class="subhead darkgray">
+				Flywheel was created out of the strength of Cottingham & Butler, drawing on decades of trucking insurance experience and expertise, and providing insurance solutions for more truckers than any other insurance agent in the country.
+			</p>
+		</div>
+		<div class="stats fadeup">
+			<div class="stat">
+				<span class="number"><span data-count="2500">2,500</span>+</span>
+				<span class="text">Trucking Companies Served</span>
+			</div>
+			<div class="stat">
+				<span class="number"><span data-count="95">95</span>%</span>
+				<span class="text">Client Retention</span>
+			</div>
+			<div class="stat">
+				<span class="number"><span data-count="300">300</span>+</span>
+				<span class="text">Dedicated Transportation Experts</span>
+			</div>
+		</div>
+	</section>
+
+	<section class="not-ready-yet">
+		<img src="{site_url}images/home/truck-bg.jpg" class="cover fill" alt="Semi driving down road">
+		<div class="text-shadow">{flywheel-type}</div>
+		{if logged_in}
+		<div class="container-sm">
+			<div class="copy-contain fadeup">
+				<div class="logo">
+					{logo}
+				</div>
+				<div class="copy">
+					<h2 class="black">Curious, but need more time?</h2>
+					<p class="black">No problem. Give us a little information and we’ll send you a reminder before your policy expires. </p>
+					<a href="#" class="btn btn-black bg-darkblue btn-rounded">Contact Us</a> 
+				</div>
+			</div>
+		</div>
+		{/if}
+	</section>
+
+	{embed="_includes/footer"}
+	{embed="_includes/_scripts" js="home" rellax="y" countup="y" waypoints="y"}
+	<script src="https://player.vimeo.com/api/player.js"></script>
+</body>
+</html>
